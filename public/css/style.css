@@ -138,6 +138,19 @@ hr {
 	margin: 10px;
 }
 
+footer {
+	text-align: center;
+	background-color: #fff;
+	width: 10%;
+	font-size: 0.9em;
+	float: left;
+	border-radius: 3px;
+}
+
+span a {
+	color: blue;
+}
+
 @media screen and (max-width: 630px) {
 
 	body {

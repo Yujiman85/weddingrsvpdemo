@@ -48,7 +48,7 @@ app.use(session({
 const db = knex({
   client: 'mysql',
   connection: {
-  	host: process.env.DB_HOST,
+ 	host: process.env.DB_HOST,
 	user: process.env.DB_USER,
 	password: process.env.DB_PASS,
 	database: process.env.DB_DB
@@ -115,5 +115,12 @@ app.post('/rsvp', urlencodedParser, function(req, res) {
 		res.render('index', { session });
 	}
 });
+
+//Route for list of people who RSVP'd for the wedding
+app.get('/list', function (req, res) {
+	db.select('name').from('rsvps').then((people) => {
+		res.render('attendees', { people })
+	});
+})
 
 app.use(express.static(__dirname + '/public'));
