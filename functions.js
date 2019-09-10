@@ -92,6 +92,5 @@ module.exports = {
 	checkDate: checkDate,
 	inputCheck: inputCheck,
 	validEmail: validEmail,
-	sendEmail: sendEmail,
-	peopleGoing: peopleGoing
+	sendEmail: sendEmail
 }
