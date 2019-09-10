@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta http-equiv="Cache-control" content="NO-CACHE">
+
+	<title>Jason and Margaret Wedding RSVP</title>
+
+	<!-- Importing Petit Formal font -->
+	<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+	<!-- Importing Roboto font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+
+	<!-- Importing Roboto Slab font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<p class="names">Jason and Margaret</p>
+		<p class="dateLoc">
+			Saturday, July 8th.<br>
+			Two Thousand Twenty<br><br>
+			Regal Ballroom<br>
+			1500 Market Street, Philadelphia, PA 19111
+		</p>
+		<img src="./images/bridegroom.png" height="50px" width="auto">
+		<br>
+		<p>Please RSVP below:</p>
+		<form name="form" method="POST" action="/confirm">
+			<label for="firstName" class="boxHeader">First Name:</label><br>
+			<input type="text" name="firstName" id="firstName" class="inputfield" value="<%= session.firstName %>"><br><br>
+			<label for="lastName" class="boxHeader">Last Name:</label><br>
+			<input type="text" name="lastName" id="lastName" class="inputfield"value="<%= session.lastName %>"><br><br>
+			<label for="email" class="boxHeader">Email:</label><br>
+			<input type="text" name="email" id="email" class="inputfield" value="<%= session.email %>">
+			<br>
+			<br>
+			<hr>
+			<button type="submit" id="submit">Submit</button>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta http-equiv="Cache-control" content="NO-CACHE">
+
+	<title>Confirm</title>
+
+	<!-- Importing Petit Formal font -->
+	<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+	<!-- Importing Roboto font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+
+	<!-- Importing Roboto Slab font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<div class="thankyoucontainer">
+		<p style="font-size: 2em">Is this information correct?</p>
+		Name:
+		<span class="confirminfo"><%= session.firstName + " " + session.lastName %></span><br><br>
+		E-mail:
+		<span class="confirminfo"><%= session.email %></span><br>
+		<br>
+		<br>
+		<form name="form" method="POST" action="/rsvp">
+		<button type="submit" name="confirm" value="yes">Yes</button>
+		&emsp;
+		<button type="submit" name="confirm" value="no">No</button>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta http-equiv="Cache-control" content="NO-CACHE">
+
+	<title>Jason and Margaret Wedding RSVP</title>
+
+	<!-- Importing Petit Formal font -->
+	<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+	<!-- Importing Roboto font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+
+	<!-- Importing Roboto Slab font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href=".\css\style.css">
+</head>
+<body>
+	<div class="thankyoucontainer">
+		<img src="./images/bridegroom.png" height="50px" width="auto"><br>
+		Thank you so much for RSVPing <strong><%= session.firstName + " " + session.lastName %>!</strong> We can't wait to see you there!<br><br>
+		<span style="font-size: 0.8em">A confirmation email has been sent to you with the details!<br> 
+		(Ya know, so you don't forget)</span>
+	</div>
+</body>
+</html>
