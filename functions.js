@@ -65,7 +65,7 @@ const sendEmail = (recipient, session) => {
 			console.log(err);
 		} else {
 			const mailOptions = {
-		  	from: process.env.SGUSER, // sender address
+		  	from: process.env.senderEmail, // sender address
 		  	to: recipient, // list of receivers
 		  	subject: "Jason and Margaret - 07.08.2020", // Subject line
 		  	html: html, // The email that is sent
