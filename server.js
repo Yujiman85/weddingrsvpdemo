@@ -105,7 +105,6 @@ app.post('/rsvp', urlencodedParser, function(req, res) {
 			name: fullName, 
 			email: email
 		}).then(()=>{});
-		// .finally(function() { db.destroy(); })
 
 		functions.sendEmail(session.email, session);
 		res.render('thankyou', { session });
