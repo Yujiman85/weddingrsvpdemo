@@ -7,7 +7,7 @@ const sgTransport = require('nodemailer-sendgrid-transport');
 //Checks to see if cut-off date has passed.
 const checkDate = () => {
 var today = new Date();
-var idate = new Date('2020-01-01'); //Cutoff date
+var idate = new Date('2021-01-01'); //Cutoff date
 idate.setHours(today.getHours());
 idate.setMinutes(today.getMinutes());
 idate.setSeconds(today.getSeconds());
@@ -89,8 +89,8 @@ const sendEmail = (recipient, session) => {
 
 //Functions exported for use
 module.exports = {
-	checkDate: checkDate,
-	inputCheck: inputCheck,
-	validEmail: validEmail,
-	sendEmail: sendEmail
+	checkDate,
+	inputCheck,
+	validEmail,
+	sendEmail
 }
