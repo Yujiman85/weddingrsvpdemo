@@ -1,5 +1,7 @@
 # weddingrsvpdemo
 RSVP for a wedding!
+This is the repository.
+The site is hosted at https://weddingrsvpdemo.herokuapp.com/
 
 Welcome to the RSVP site I've built on my own! I built it as a way to gauge myself in terms of my coding ability using Javascript.
 
