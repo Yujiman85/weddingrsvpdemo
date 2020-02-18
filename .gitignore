@@ -1,6 +1,5 @@
 # Don't track content of these folders
 *.env
-node_modules/
 
 
 # Compiled source #
@@ -24,3 +23,5 @@ node_modules/
 *.rar
 *.tar
 *.zip
+
+node_modules/
