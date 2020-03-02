@@ -1,4 +1,4 @@
-# weddingrsvpdemo
+# Wedding RSVP Demo Site!
 RSVP for a wedding!
 This is the repository.
 The site is hosted at https://weddingrsvpdemo.herokuapp.com/
