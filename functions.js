@@ -56,7 +56,7 @@ const sendEmail = (recipient, session) => {
 	const transporter = nodemailer.createTransport(sgTransport({
 	auth: {
         api_user: process.env.SGUSER,
-	    api_key: process.env.SGAPIKEY
+	    api_key: process.env.SENDGRID_API_KEY
      }
 	}));
 
