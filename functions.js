@@ -63,14 +63,14 @@ const sendEmail = (recipient, session) => {
 				to: recipient, // list of receivers
 				subject: "Jason and Margaret - 07.08.2020", // Subject line
 				html: html, // The email that is sent
-				attachments: [{
-				filename: 'fancyheader.png',
-				path: __dirname +'/public/images/fancyheader.png',
-				cid: 'fancyheader' 
-				}]
+				// attachments: [{
+				// filename: 'fancyheader.png',
+				// path: __dirname +'/public/images/fancyheader.png',
+				// cid: 'fancyheader' 
+				// }]
 			};
 			sgMail.send(msg);
-		}
+		};
 	});
 };
 
