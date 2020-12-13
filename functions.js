@@ -2,7 +2,6 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const fs = require('fs');
 const ejs = require('ejs');
-const sgTransport = require('nodemailer-sendgrid-transport');
 const sgMail = require('@sendgrid/mail');
 
 //Checks to see if cut-off date has passed.
@@ -54,13 +53,6 @@ const validEmail = (email) => {
 //Sends email to person who just RSVP'd
 const sendEmail = (recipient, session) => {
 
-	const transporter = nodemailer.createTransport(sgTransport({
-	auth: {
-        api_user: process.env.SGUSER,
-	    api_key: process.env.SENDGRID_API_KEY
-     }
-	}));
-
 	ejs.renderFile(__dirname + '/public/email.html', { session }, function (err, html) {
 		if (err) {
 			console.log(err);
@@ -77,7 +69,6 @@ const sendEmail = (recipient, session) => {
 				cid: 'fancyheader' 
 				}]
 			};
-
 			sgMail.send(msg);
 		}
 	});
