@@ -12,6 +12,7 @@ const nodemailer = require('nodemailer');
 const { check, validationResult } = require('express-validator');
 const fs = require('fs');
 const sgTransport = require('nodemailer-sendgrid-transport');
+const sgMail = require('@sendgrid/mail')
 
 //Importing external functions
 const functions = require('./functions.js');

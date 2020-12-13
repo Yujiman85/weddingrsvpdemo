@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 const fs = require('fs');
 const ejs = require('ejs');
 const sgTransport = require('nodemailer-sendgrid-transport');
+const sgMail = require('@sendgrid/mail');
 
 //Checks to see if cut-off date has passed.
 const checkDate = () => {
@@ -64,27 +65,22 @@ const sendEmail = (recipient, session) => {
 		if (err) {
 			console.log(err);
 		} else {
-			const mailOptions = {
-		  	from: process.env.senderEmail, // sender address
-		  	to: recipient, // list of receivers
-		  	subject: "Jason and Margaret - 07.08.2020", // Subject line
-		  	html: html, // The email that is sent
-		  	attachments: [{
-		     filename: 'fancyheader.png',
-		     path: __dirname +'/public/images/fancyheader.png',
-		     cid: 'fancyheader' 
-			}]
+			sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+			const msg = {
+				from: process.env.senderEmail, // sender address
+				to: recipient, // list of receivers
+				subject: "Jason and Margaret - 07.08.2020", // Subject line
+				html: html, // The email that is sent
+				attachments: [{
+				filename: 'fancyheader.png',
+				path: __dirname +'/public/images/fancyheader.png',
+				cid: 'fancyheader' 
+				}]
 			};
 
-			transporter.sendMail(mailOptions, function (err, info) {
-		   		if(err)
-		     	console.log(err)
-		   		else
-		     	console.log(info);
-			});
+			sgMail.send(msg);
 		}
-	}
-	)
+	});
 };
 
 //Functions exported for use
