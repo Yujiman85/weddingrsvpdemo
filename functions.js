@@ -64,8 +64,8 @@ const sendEmail = (recipient, session) => {
 				subject: "Jason and Margaret - 07.08.2020", // Subject line
 				html: html, // The email that is sent
 				attachments: [{
-				filename: __dirname +'/public/images/fancyheader.png',
-				content_id: 'fancyheader' 
+				filename: '/public/images/fancyheader.png',
+				content_id: 'fancyheader'
 				}]
 			};
 			sgMail.send(msg);
