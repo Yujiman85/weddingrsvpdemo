@@ -6,30 +6,30 @@ const sgMail = require('@sendgrid/mail');
 
 //Checks to see if cut-off date has passed.
 const checkDate = () => {
-var today = new Date();
-var idate = new Date('2021-01-01'); //Cutoff date
-idate.setHours(today.getHours());
-idate.setMinutes(today.getMinutes());
-idate.setSeconds(today.getSeconds());
-idate.setMilliseconds(today.getMilliseconds());
+	var today = new Date();
+	var idate = new Date('2022-01-01'); //Cutoff date
+	idate.setHours(today.getHours());
+	idate.setMinutes(today.getMinutes());
+	idate.setSeconds(today.getSeconds());
+	idate.setMilliseconds(today.getMilliseconds());
 
-// Parsing the date objects.
-today = Date.parse(today);
-idate = Date.parse(idate);
+	// Parsing the date objects.
+	today = Date.parse(today);
+	idate = Date.parse(idate);
 
-// Comparisons.
-if (idate == today) {
-    timeCheck = 'Date is today.';
-    return timeCheck;
-}
-else if (idate < today) {
-    const timeCheck =  'Date is in the past.';
-    return timeCheck;
-}
-else if (idate > today) {
-    const timeCheck =  'Date is in the future.';
-    return timeCheck;
-}
+	// Comparisons.
+	if (idate == today) {
+		timeCheck = 'Date is today.';
+		return timeCheck;
+	}
+	else if (idate < today) {
+		const timeCheck =  'Date is in the past.';
+		return timeCheck;
+	}
+	else if (idate > today) {
+		const timeCheck =  'Date is in the future.';
+		return timeCheck;
+	}
 };
 
 //Checks to see if input field is empty and notifies user accordingly
