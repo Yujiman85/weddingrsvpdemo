@@ -15,7 +15,7 @@
     "connect-redis": "^4.0.4",
     "dotenv": "^8.2.0",
     "ejs": "^2.7.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.17.1",
     "express-validator": "^6.8.0",
     "knex": "^0.19.5",
